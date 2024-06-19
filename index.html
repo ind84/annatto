@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/base.css" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Proyect</title>
+  </head>
+  <body>
+    <nav class="menu">
+      <a href="index.html">
+        <img src="LOGOS/IMG HOME/LOGOANNATTO.png" height="70px" />
+      </a>
+      <ul>
+        <li>
+          <a href="index.html"> Home </a>
+        </li>
+        <li>
+          <a href="#entradas"> Menú Principal </a>
+        </li>
+        <li>
+          <a href="#"> Bebidas y Postres </a>
+        </li>
+        <li>
+          <a href="#"> Tienda Fit </a>
+        </li>
+      </ul>
+      <div>
+        <button class="search">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+            <path d="M21 21l-6 -6" />
+          </svg>
+        </button>
+
+        <button class="carrito">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-bag-heart"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M11.5 21h-2.926a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304h11.339a2 2 0 0 1 1.977 2.304c-.057 .368 -.1 .644 -.127 .828"
+            />
+            <path d="M9 11v-5a3 3 0 0 1 6 0v5" />
+            <path
+              d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    <figure>
+      <img
+        class="portada"
+        src="LOGOS/IMG HOME/louis-hansel-jRKqqyKA0T4-unsplash.jpg"
+      />
+    </figure>
+
+    <dialog id="carrito" class="carrito-home">
+      <header>
+        <button class="cerrarcarrito" autofocus>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-circle-x iconocerrar"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+            <path d="M10 10l4 4m0 -4l-4 4" />
+          </svg>
+        </button>
+      </header>
+     <section id="storage"></section>
+    </dialog>
+
+    <dialog id="search" class="search-home">
+      <header class="search-header">
+        <div class="buttonsearchheader">
+          <button class="cerrarsearch" autofocus>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-circle-x iconocerrarsearch"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+              <path d="M10 10l4 4m0 -4l-4 4" />
+            </svg>
+          </button>
+        </div>
+        <div class="inputsearchheader"><input id="searchinput"  type="search" /></div>
+      </header>
+      <section id="products"></section>
+    </dialog>
+
+    <h1>DISFRUTA DELICIAS SALUDABLES A TU ALCANCE</h1>
+    <div class="boxes">
+      <div class="box1">
+        <h3>MENÚ PRINCIPAL</h3>
+        <img src="LOGOS/IMG HOME/salmón.jpg" width="400px" />
+        <p>
+          Preparaciones saludables adaptadas a tus preferencias o necesidades
+          nutritivas.
+        </p>
+        <a href="#entradas"> <button class="btn">VER MÁS</button></a>
+      </div>
+      <div class="box2">
+        <h3>BEBIDAS Y POSTRES</h3>
+        <img src="LOGOS/IMG HOME/tortasal.jpg" width="400px" />
+        <p>
+          Preparados con ingredientes orgánicos, sin preservantes y sin azúcar.
+        </p>
+        <a href="#"><button class="btn">VER MÁS</button></a>
+      </div>
+      <div class="box3">
+        <h3>TIENDA FIT</h3>
+        <img src="LOGOS/IMG HOME/cacahuete.jpg" width="400px" />
+        <p>
+          Encuentra en nuestra tienda alternativas saludables para disfrutarlas
+          sin culpa.
+        </p>
+        <a href="#"><button class="btn">VER MÁS</button></a>
+      </div>
+    </div>
+    <h1>AMBIENTE ACOJEDOR Y SOFISTICADO</h1>
+    <div class="boxes2">
+      <img
+        src="LOGOS/IMG HOME/restaurantes-con-color-01.webp"
+        height="400px"
+        width="100%"
+      />
+      <img
+        src="LOGOS/IMG HOME/restaurantes2.webp"
+        height="400px"
+        width="100%"
+      />
+    </div>
+    <section id="entradas">
+      
+    </section>
+
+    <section class="section-img-animation">
+      <img class="img-animation" src="IMG MENU/carne.jpg" />
+      <img class="img-animation" src="IMG MENU/lomo.jpg" />
+      <img class="img-animation" src="IMG MENU/pechuga.jpg" />
+      <img class="img-animation" src="IMG MENU/pavo.jpg" />
+      <img class="img-animation" src="IMG MENU/SushiSinArroz.png" />
+      <img class="img-animation" src="IMG MENU/SALMON.jpg" />
+    </section>
+
+    <footer>
+      <h1>RESERVAS</h1>
+      <div class="boxes3">
+        <img
+          src="LOGOS/IMG HOME/servicio-al-cliente.png"
+          height="50px"
+          width="50px"
+        />
+        <h4>605802970</h4>
+        <img src="LOGOS/IMG HOME/localizacion.png" height="50px" width="50px" />
+        <h4>Cra 9 # 63-110 Centro. Valledupar-Cesar</h4>
+        <a href="https://web.whatsapp.com/"
+          ><img src="LOGOS/IMG HOME/whatsapp.png" height="50px" width="50px"
+        /></a>
+        <h4>3166801915</h4>
+      </div>
+
+      <h2>Síguenos</h2>
+      <div class="boxes4">
+        <a href="https://www.facebook.com/"
+          ><img src="LOGOS/IMG HOME/facebook.png" height="30px"
+        /></a>
+        <a href="https://www.instagram.com/">
+          <img src="LOGOS/IMG HOME/instagram.png" height="30px"
+        /></a>
+        <a href="https://x.com/?lang=es"
+          ><img src="LOGOS/IMG HOME/gorjeo.png" height="30px"
+        /></a>
+      </div>
+
+      <h5>Todos los derechos reservados</h5>
+    </footer>
+    <script type="module" src="./index.js"></script>
+  </body>
+</html>
