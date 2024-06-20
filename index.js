@@ -30,7 +30,7 @@ searchinput.addEventListener("input", function (e) {
     for (const filterProduct of productFiltered) {
       productsElement.innerHTML = `  <div class="boxproductsearch">
               
-          <figure> <img src="IMG MENU/cherry.png"/></figure>
+          <figure > <img src="${filterProduct.image}"/></figure>
                   <div><h3>${filterProduct.name}</h3>
                 <p>${filterProduct.description}</p>
                 <h4>${filterProduct.price}</h4>
@@ -51,8 +51,7 @@ function getProductos() {
     productsElement.innerHTML += `
   
           <div class="boxproductsearch">
-          
-      <figure> <img src="IMG MENU/cherry.png"/></figure>
+      <figure> <img src="${product.image}"/></figure>
               <div><h3>${product.name}</h3>
             <p>${product.description}</p>
             <h4>${product.price}</h4>
@@ -68,12 +67,12 @@ function getProductoscart() {
   for (const product of productsfitstrong) {
     const container = document.createElement("div");
     container.innerHTML += `
-  <div class="boxproductsearch">
+  <div class="boxproductcart">
           
       <figure> <img src="${product.foto}"/></figure>
               <div><h3>${product.nombre}</h3>
             <p>${product.descripcion}</p>
-            <h4>${product.precio}</h4>
+            <h4>$${product.precio}</h4>
             <button id="add-to-cart-${product.id}" class="btn">Agregar al carrito</button>
             </div>
   </div>
@@ -87,6 +86,13 @@ function getProductoscart() {
   }
 }
 
+function deleteProductByIndex(id) {
+  const cartLocal = JSON.parse(globalThis.localStorage.getItem("cart") || "[]");
+
+  const nuevoArray = cartLocal.filter(product => product.id !== id)
+  localStorage.setItem("cart", JSON.stringify(nuevoArray));
+  loadCart()
+}
 function addToCart(product) {
  cart.push(product) 
  globalThis.localStorage.setItem('cart', JSON.stringify(cart))
@@ -105,9 +111,29 @@ function loadCart() {
    
     storageElement.innerHTML = ''
       if (cartLocal.length) {
-        for (const product of cartLocal) {
-          storageElement.innerHTML += `<h2>${product.nombre}</h2>`;
-        }
+        cartLocal.forEach(function(product, index) {
+          const productcontainer=document.createElement("div")
+          productcontainer.classList.add("productcontainer")
+          productcontainer.innerHTML += `
+         <figure>
+       <img src="${product.foto}"/>
+       </figure>
+              <div>
+              <h3>${product.nombre}</h3>
+            <p>${product.descripcion}</p>
+            <h4>$${product.precio}</h4>
+         <button id="product-${product.id}">Eliminar</button>
+       </div>
+         
+         `;
+         const buttonDelete = productcontainer.querySelector(`#product-${product.id}`)
+         buttonDelete.addEventListener('click', () => {
+          deleteProductByIndex(product.id)
+         })
+
+         storageElement.appendChild(productcontainer)
+       })
+        
       } else {
         storageElement.innerHTML = cartEmptyTemplate;
       }

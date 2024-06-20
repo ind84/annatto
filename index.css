@@ -79,12 +79,50 @@ input {
   display: flex;
   align-items: center;
 }
-#products {
-
+.storage{
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.storage .productcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:1rem;
+  max-width: 24rem;
+}
+.storage .productcontainer img{
+  width:70px ;
+  height: 70px;
+  object-fit: cover;
+  text-wrap: pretty;
+  padding-left: 20px;
+  border-radius: 2rem;
+  padding-right: 20px;
+}
+.storage .productcontainer p{
+  font-size: 0.7rem;
+}
+.storage .productcontainer h3{
+  font-size: 0.9rem;
+}
+.storage .productcontainer button{
+background-color: red;
+font-weight: 600;
+padding-left: 0.7rem;
+padding-right: 0.7rem;
+color: white;
+border-radius: 2rem;
+
+&:hover{
+  opacity: 0.9;
+}
+}
+.products {
+
+  display: grid;
+  grid-template-columns: 50% 50%;
   gap: 1rem;
 }
 .inputsearchheader{
@@ -114,6 +152,31 @@ a {
 figure {
   margin: 0;
 }
+.platos{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap:10px;
+  padding-top: 1rem;
+}
+
+.platos .boxproductcart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+  
+.platos .boxproductcart img {
+  width: 200px;
+  object-fit: contain;
+
+}
+
+.platos .boxproductcart p {
+  text-wrap:  pretty;
+  font-size: 0.9rem;
+
+}
 
 .portada {
   height: 100vh;
@@ -129,10 +192,7 @@ h2 {
   font-weight: bolder;
   text-align: left;
 }
-h3 {
-  text-decoration: underline;
-  text-align: center;
-}
+
 h5 {
   text-align: center;
 }
@@ -153,25 +213,26 @@ h5 {
   );
   border-radius: 5px;
 }
+
 .boxes2 {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
   gap: 20px;
 }
 .boxes3 {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 20px;
-  flex-direction: column;
 }
 
 .boxes4 {
   gap: 20px;
+  align-items: center;
 }
 
 /*-------------------------------------------------------------*/
-
 .boxes1 {
   text-align: center;
   display: flex;
@@ -181,8 +242,9 @@ h5 {
   font-weight: bold;
   padding: 20px;
   margin: 20px;
-  flex-direction: row;
+
 }
+
 .boxes-2 {
   text-align: center;
   display: flex;
@@ -192,9 +254,8 @@ h5 {
   font-weight: bold;
   padding: 20px;
   margin: 20px;
-  flex-direction: row;
 }
-
+ 
 .section-img-animation {
   width: 400px;
   height: 400px;
@@ -203,14 +264,7 @@ h5 {
   display: flex;
   margin: auto;
 }
-#entradas {
-  display: flex;
-  justify-content: center;
-  font-family: sans-serif;
-  font-weight: bolder;
-  flex-wrap: wrap;
-  gap: 30px;
-}
+
 .img-animation {
   width: 0px;
   flex-grow: 1;
@@ -239,4 +293,14 @@ div logo {
   .boxes{
     flex-direction: column;
   }
+  .boxes2{
+  flex-direction: column;
 }
+.boxes3{
+  flex-direction: column;
+}
+.boxes4{
+  flex-direction: column;
+}
+}
+
