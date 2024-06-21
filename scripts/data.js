@@ -2,14 +2,14 @@ export const productosFit = [
   {
     name: "Ensalada de Quinoa",
     description:
-      "Ensalada fresca con quinoa, espinacas, tomates cherry y aguacate, aderezada con limón y aceite de oliva.",
+      "Ensalada fresca con quinoa, espinacas, tomates cherry y aguacate, con limón",
     image: "IMG MENU/quinoa.jpg",
     price: 8.99,
   },
   {
-    name: "Batido de Proteína de Chocolate",
+    name: " Proteína de Chocolate",
     description:
-      "Delicioso batido de proteína sabor chocolate, ideal para después del entrenamiento.",
+      "Batido de proteína sabor chocolate, ideal para el postentrenamiento.",
     image: "img_postres/choco.jpg",
     price: 4.99,
   },
@@ -21,7 +21,7 @@ export const productosFit = [
     price: 2.49,
   },
   {
-    name: "Pollo a la Parrilla con Vegetales",
+    name: "Pollo a la Parrilla",
     description:
       "Pechuga de pollo a la parrilla servida con una mezcla de vegetales frescos.",
     image: "IMG MENU/pollop.jpg",
@@ -30,7 +30,7 @@ export const productosFit = [
   {
     name: "Smoothie Verde",
     description:
-      "Smoothie de espinacas, kale, manzana, plátano y jengibre, lleno de vitaminas y antioxidantes.",
+      "Smoothie de espinacas, kale, manzana, plátano y jengibre, lleno de vitaminas.",
     image: "img_postres/verde.jpg",
     price: 5.99,
   },
@@ -48,14 +48,14 @@ export const productosFit = [
     price: 12.99,
   },
   {
-    name: "Wrap de Pavo y Aguacate",
+    name: "Wrap de Pavo",
     description:
       "Wrap integral relleno de pavo, aguacate, lechuga y un toque de mostaza.",
     image: "IMG MENU/pavow.jpg",
     price: 6.99,
   },
   {
-    name: "Yogur Griego con Frutas",
+    name: "Yogur Griego",
     description:
       "Yogur griego natural servido con una mezcla de frutas frescas y miel.",
     image: "img_postres/griegofru.jpg",
@@ -64,7 +64,7 @@ export const productosFit = [
   {
     name: "Batata Asada",
     description:
-      "Batata asada con un toque de canela y miel, perfecta como acompañamiento o snack.",
+      "Batata asada con un toque de canela y miel, perfecta como acompañamiento.",
     image: "IMG MENU/batata.jpg",
     price: 4.49,
   },
