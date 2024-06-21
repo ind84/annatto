@@ -16,8 +16,10 @@ const productsElement = document.querySelector("#products");
 const searchinput = document.querySelector("#searchinput");
 const boxescartelement = document.querySelector("#entradas");
 const storageElement = document.querySelector("#storage");
+const boxproductsearch = document.querySelector("boxproductsearch");
 
 const cart = [];
+const search=[];
 
 searchinput.addEventListener("input", function (e) {
   const value = e.target.value; // valor del input
@@ -33,8 +35,8 @@ searchinput.addEventListener("input", function (e) {
           <figure > <img src="${filterProduct.image}"/></figure>
                   <div><h3>${filterProduct.name}</h3>
                 <p>${filterProduct.description}</p>
-                <h4>${filterProduct.price}</h4>
-                <button class="btn">Comprar</button>
+                <h4>$${filterProduct.price}</h4>
+                <button class="btn">Agregar al carrito</button>
                 </div>
       </div>`;
     }
@@ -54,12 +56,13 @@ function getProductos() {
       <figure> <img src="${product.image}"/></figure>
               <div><h3>${product.name}</h3>
             <p>${product.description}</p>
-            <h4>${product.price}</h4>
-            <button class="btn">Comprar</button>
+            <h4>$${product.price}</h4>
+            <button id="add-to-cart-${product.id}"class="btn">Agregar al carrito</button>
             </div>
   </div>
     
       `;
+    
   }
 }
 
@@ -106,7 +109,7 @@ function loadCart() {
         <h2>TU CARRITO ESTA VACÍO</h2>
         <p>Agrega tu platillo favorito para hacer tu compra</p>
         <img src="LOGOS/IMG HOME/CARRITO.png" width="200px" />
-        <button class="buy">Comenzar a comprar</button>
+       <a href="index.html"> <button class="buy">Comenzar a comprar</button></a>
       </aside>`; 
    
     storageElement.innerHTML = ''
@@ -123,6 +126,7 @@ function loadCart() {
             <p>${product.descripcion}</p>
             <h4>$${product.precio}</h4>
          <button id="product-${product.id}">Eliminar</button>
+        <a href="https://www.paypal.com/co/webapps/mpp/account-selection"> <button id="product-${product.id}">Comprar</button></a>
        </div>
          
          `;

@@ -28,6 +28,13 @@ body {
   gap: 10px;
   text-align: center;
 }
+.menu ul li :hover{
+  background-color:antiquewhite;
+  padding: 10px;
+  border-radius: 1rem;
+  border-color: bisque;
+}
+
 .quitar-scroll {
   overflow: hidden;
 }
@@ -100,6 +107,7 @@ input {
   padding-left: 20px;
   border-radius: 2rem;
   padding-right: 20px;
+  gap: 20px;
 }
 .storage .productcontainer p{
   font-size: 0.7rem;
@@ -130,6 +138,7 @@ border-radius: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
 }
 .iconocerrarsearch{
   color: grey;
@@ -140,11 +149,24 @@ border-radius: 2rem;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
+  gap: 1rem;
 }
 .boxproductsearch p {
   text-wrap: pretty;
 }
+.boxproductsearch img{
+ width:190px ;
+  height: 200px;
+  object-fit: cover;
+  text-wrap: pretty;
+  padding-left: 20px;
+  border-radius: 2rem;
+  padding-right: 20px;
+  gap: 20px;
+
+}
+
+
 a {
   color: black;
   text-decoration: none;
