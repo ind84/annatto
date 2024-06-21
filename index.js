@@ -1,4 +1,4 @@
-import { productosFit, productsfitstrong } from "./scripts/data.js";
+import { productosFit, productsfitstrong, productDesert, productStore } from "./scripts/data.js";
 import confetti from "https://esm.sh/canvas-confetti";
 
 
@@ -16,7 +16,7 @@ const productsElement = document.querySelector("#products");
 const searchinput = document.querySelector("#searchinput");
 const boxescartelement = document.querySelector("#entradas");
 const storageElement = document.querySelector("#storage");
-const boxproductsearch = document.querySelector("boxproductsearch");
+
 
 const cart = [];
 const search=[];
@@ -71,7 +71,7 @@ function getProductoscart() {
     const container = document.createElement("div");
     container.innerHTML += `
   <div class="boxproductcart">
-          
+ 
       <figure> <img src="${product.foto}"/></figure>
               <div><h3>${product.nombre}</h3>
             <p>${product.descripcion}</p>
